@@ -22,9 +22,6 @@
       min-height: 100vh;
     }
 
-    /* ════════════════════════════════
-       SHARED AUTH BACKGROUND
-    ════════════════════════════════ */
     .auth-page {
       min-height: 100vh;
       background: linear-gradient(150deg, #ad1457 0%, var(--primary) 55%, #f06292 100%);
@@ -75,7 +72,7 @@
       to   { opacity: 1; transform: translateY(0)   scale(1); }
     }
 
-    /* ── Card Header ── */
+    
     .ac-header {
       background: linear-gradient(135deg, #ad1457, var(--primary));
       padding: 28px 28px 26px;
@@ -155,7 +152,7 @@
       40%,80%  { transform: translateX(5px); }
     }
 
-    /* ── Form elements ── */
+  
     .f-label {
       font-size: 0.84rem;
       font-weight: 600;
@@ -216,7 +213,6 @@
     }
     .toggle-pwd:hover { color: var(--primary); }
 
-    /* Password strength bar */
     .pwd-strength {
       height: 4px;
       border-radius: 4px;
@@ -244,7 +240,6 @@
       margin-bottom: 14px;
     }
 
-    /* ── Buttons ── */
     .btn-primary-full {
       width: 100%;
       padding: 12px;
@@ -269,7 +264,6 @@
 
     .btn-primary-full:disabled { opacity: 0.65; cursor: not-allowed; }
 
-    /* ── Link row ── */
     .link-row {
       display: flex;
       justify-content: space-between;
@@ -296,7 +290,6 @@
 
     .link-row .muted { color: #9e9e9e; font-size: 0.82rem; }
 
-    /* Divider */
     .divider {
       display: flex;
       align-items: center;
@@ -309,7 +302,6 @@
       content: ''; flex: 1; height: 1px; background: #f0c0d0;
     }
 
-    /* Spinner */
     .spinner {
       width: 17px; height: 17px;
       border: 2px solid rgba(255,255,255,0.35);
@@ -464,6 +456,100 @@
     .alert-success { background:#e8f5e9; color:#1b5e20; border-left:5px solid #2e7d32; }
     .alert-danger  { background:#ffebee; color:#b71c1c; border-left:5px solid #c62828; }
 
+ 
+    .btn-spreadsheet-header {
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.45);
+      color: white;
+      border-radius: 10px;
+      padding: 5px 13px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex; align-items: center; gap: 6px;
+      transition: all 0.2s;
+      text-decoration: none;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .btn-spreadsheet-header:hover {
+      background: rgba(255,255,255,0.30);
+      color: white;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-spreadsheet-header i { font-size: 0.85rem; }
+
+    .header-left-actions {
+      position: absolute;
+      top: 14px; left: 14px;
+      display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+    }
+
+    .spreadsheet-banner {
+      background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 60%, #388e3c 100%);
+      border-radius: 16px;
+      padding: 1rem 1.3rem;
+      margin-top: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 4px 16px rgba(27,94,32,0.25);
+      flex-wrap: wrap;
+    }
+
+    .spreadsheet-banner .banner-info {
+      display: flex; align-items: center; gap: 12px;
+    }
+
+    .spreadsheet-banner .banner-icon {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .spreadsheet-banner .banner-text strong {
+      display: block;
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .spreadsheet-banner .banner-text span {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.78rem;
+    }
+
+    .btn-open-sheet {
+      background: white;
+      color: #1b5e20;
+      border: none;
+      border-radius: 10px;
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex; align-items: center; gap: 7px;
+      text-decoration: none;
+      transition: all 0.22s;
+      white-space: nowrap;
+      font-family: inherit;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .btn-open-sheet:hover {
+      background: #f1f8e9;
+      color: #1b5e20;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+    }
+    .btn-open-sheet i { font-size: 0.95rem; }
+
+  
+
     footer {
       text-align: center;
       padding: 1.5rem 1rem;
@@ -480,7 +566,6 @@
       to   { opacity:1; transform:translateY(0); }
     }
 
-    /* Steps indicator (reset password) */
     .steps {
       display: flex;
       justify-content: center;
@@ -502,6 +587,9 @@
       .input-group .input-group-text { padding-left:.5rem; padding-right:.5rem; font-size:.88rem; }
       .main-container { padding:1.2rem .8rem; }
       .form-card { padding:1.3rem 1rem; }
+      .spreadsheet-banner { flex-direction: column; align-items: flex-start; }
+      .btn-open-sheet { width: 100%; justify-content: center; }
+      .header-left-actions { display: none; } /* hide on small screens, banner is enough */
     }
     @media (min-width:576px) {
       .main-container { padding:2rem 1.5rem; }
@@ -512,9 +600,7 @@
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════
-     PAGE 1 — LOGIN
-══════════════════════════════════════════ -->
+
 <div class="auth-page" id="loginPage">
   <div class="auth-wrapper">
     <div class="auth-card">
@@ -654,9 +740,6 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE 3 — RESET PASSWORD
-══════════════════════════════════════════ -->
 <div class="auth-page" id="resetPage" style="display:none">
   <div class="auth-wrapper">
     <div class="auth-card">
@@ -687,7 +770,7 @@
           <span id="resetOkTxt">Password berhasil diubah!</span>
         </div>
 
-        <!-- Step 1: Cari username -->
+        <!-- Step 1 -->
         <div id="resetStep1">
           <label class="f-label" for="rsu">Username</label>
           <div class="input-wrap">
@@ -699,7 +782,7 @@
           </button>
         </div>
 
-        <!-- Step 2: Jawab pertanyaan keamanan -->
+        <!-- Step 2 -->
         <div id="resetStep2" style="display:none">
           <div class="msg-box msg-info show" id="resetQuestion" style="margin-bottom:16px">
             <i class="fas fa-circle-question"></i>
@@ -715,7 +798,7 @@
           </button>
         </div>
 
-        <!-- Step 3: Password baru -->
+        <!-- Step 3 -->
         <div id="resetStep3" style="display:none">
           <label class="f-label" for="rnp">Password Baru</label>
           <div class="input-wrap">
@@ -752,12 +835,18 @@
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE 4 — DATABASE PASIEN
-══════════════════════════════════════════ -->
 <div id="dbPage">
 
   <header class="db-header">
+
+    <!-- Kiri atas: tombol spreadsheet -->
+    <div class="header-left-actions">
+      <a id="btnSheetHeader" href="#" target="_blank" rel="noopener" class="btn-spreadsheet-header">
+        <i class="fas fa-table-columns"></i> Lihat Spreadsheet
+      </a>
+    </div>
+
+    <!-- Kanan atas: info user + logout -->
     <div class="header-actions">
       <div class="logged-as" id="loggedAsLabel">
         <i class="fas fa-circle-user"></i> <span id="loggedAsName">—</span>
@@ -766,6 +855,7 @@
         <i class="fas fa-right-from-bracket"></i> Keluar
       </button>
     </div>
+
     <i class="fas fa-heartbeat main-icon"></i>
     <h1>Database Pasien</h1>
     <p class="subtitle">Pencatatan Data Kebidanan &amp; Kehamilan</p>
@@ -836,15 +926,38 @@
 
       </form>
     </div>
+
+    <!-- ══ BANNER SPREADSHEET ══ -->
+    <div class="spreadsheet-banner">
+      <div class="banner-info">
+        <div class="banner-icon">📊</div>
+        <div class="banner-text">
+          <strong>Lihat Data di Spreadsheet</strong>
+          <span>Buka Google Sheets untuk melihat seluruh data pasien</span>
+        </div>
+      </div>
+      <a id="btnSheetBanner" href="#" target="_blank" rel="noopener" class="btn-open-sheet">
+        <i class="fas fa-arrow-up-right-from-square"></i> Buka Spreadsheet
+      </a>
+    </div>
+    <!-- ══ /BANNER SPREADSHEET ══ -->
+
   </div>
 
+  <footer>
+    <i class="fas fa-heart" style="color:var(--primary)"></i>
+  </footer>
 
 </div>
 
-<!-- ══════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════ -->
 <script>
+
+  const SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/17E3cGl1oAu5ayYWwaZKIW5QOPbuwQqFRk_GOGpUW4W4/edit?usp=sharing';
+  /* ════════════════════════════════════════════ */
+
+  document.getElementById('btnSheetHeader').href = SPREADSHEET_URL;
+  document.getElementById('btnSheetBanner').href = SPREADSHEET_URL;
+
   /* ─── STORAGE HELPERS ─── */
   const STORE_KEY = 'klinik_accounts';
 
@@ -867,7 +980,7 @@
       const accounts = getAccounts();
       accounts.push({
         username: 'bidan',
-        password: 'mutiara2025',
+        password: 'mutiara2026',
         question:  'q2',
         answer:    'admin'
       });
@@ -900,7 +1013,6 @@
       const el = document.getElementById(pageId);
       if (el) {
         el.style.display = 'flex';
-        // re-trigger animation
         const card = el.querySelector('.auth-card');
         if (card) { card.style.animation = 'none'; requestAnimationFrame(() => { card.style.animation = ''; }); }
       }
@@ -915,7 +1027,7 @@
     goTo('dbPage');
   }
 
-  /* ─── TOGGLE PASSWORD helper ─── */
+  /* ─── TOGGLE PASSWORD ─── */
   document.addEventListener('click', function(e) {
     const btn = e.target.closest('.toggle-pwd');
     if (!btn) return;
@@ -949,7 +1061,7 @@
     checkStrength(this.value, 'strengthBar2', 'strengthTxt2');
   });
 
-  /* ─── SHOW / HIDE msg helpers ─── */
+  /* ─── MSG HELPERS ─── */
   function showErr(id, msg) {
     const el = document.getElementById(id);
     const tx = document.getElementById(id + 'Txt');
@@ -1024,9 +1136,7 @@
       document.getElementById('strengthBar').className = 'pwd-strength-bar';
       document.getElementById('strengthTxt').textContent = 'Masukkan password';
 
-      // Flash success then redirect to login
       hideMsg('regErr');
-      // Show a success inline
       const body = document.querySelector('#registerPage .ac-body');
       const tmp = document.createElement('div');
       tmp.className = 'msg-box msg-success show';
@@ -1096,7 +1206,6 @@
     }, 700);
   }
 
-  // Init reset page state
   setStep(1);
 
   /* ─── LOGOUT ─── */
