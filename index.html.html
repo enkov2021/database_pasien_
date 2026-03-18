@@ -20,11 +20,12 @@
     body {
       font-family: system-ui, -apple-system, sans-serif;
       min-height: 100vh;
+      background: #ffffff;
     }
 
     .auth-page {
       min-height: 100vh;
-      background: linear-gradient(150deg, #ad1457 0%, var(--primary) 55%, #f06292 100%);
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -40,6 +41,7 @@
       filter: blur(70px);
       opacity: 0.35;
       pointer-events: none;
+      display: none;
     }
     .auth-page::before {
       width: 380px; height: 380px;
@@ -322,7 +324,7 @@
     ════════════════════════════════ */
     #dbPage {
       display: none;
-      background: var(--light-pink);
+      background: #ffffff;
       min-height: 100vh;
     }
     #dbPage.show { display: block; }
